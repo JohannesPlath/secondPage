@@ -11,13 +11,15 @@
         flex-direction: row;
         position: fixed;
         justify-content: center;
-        top: 0; bottom:0;
+        top: 0; bottom:0; left:0;
         width: 17%;
+        min-width: 130px;
         height: 100%;
         background-color: #d7d7de;
-        font-family: Arial;
+        font-family: Arial, serif;
         font-size: 80%;
-        color: aquamarine;
+        color: blue;
+
 
     }
     .none{
@@ -27,9 +29,12 @@
     }
     .nav{
         position: absolute;
-        /*text-anchor: middle;
-        text-align: center;*/
-        top:20%;
+        text-anchor: middle;
+        text-align: left;
+        top:30%;
+        left: 0;
+
+        border: 2px solid wheat;
 
     }
     .LoginArea{
@@ -38,31 +43,32 @@
         flex-flow: row;
         Justify-content: center;
         list-style-type: georgian;
+        max-width: 80%;
         border: 20px solid wheat;
+        border-radius: 10%;
         background-color: aquamarine;
-        padding: 5px;
+        padding: 2%;
     }
     .logIn{
         display: flex;
         flex-direction: column;
-
-
         border: 1px solid blueviolet;
+        border-radius: 10%;
         background-color: aquamarine;
         padding: 3%;
         font-family: Arial, monospace;
     }
     .body{
         display: flex;
-        flex-direction: row;
-        flex-flow: row;
-        position: absolute;
-        top: 2%;
-        left: 20%;
-        right: 5%;
-
-        display: flex;
         flex-direction: column;
+        flex-flow: column;
+        Justify-content: center;
+        position: absolute;
+
+        top: 2%;
+        left: 25%;
+        right: 5%;
+        bottom: 20%;
         text-align: center;
         text-anchor: middle;
 
@@ -95,7 +101,7 @@
         height: 150%;
         justify-content: space-around;
         background-color: aquamarine;
-        hight: 300px;
+
         text-anchor: middle;
         border: 3px #28e582 ;
 
@@ -128,16 +134,17 @@
         text-align: center;
         text-anchor: middle;
         background-color: #d7d7de;
-        font-family:  Arial;
+        font-family: Arial, serif;
         color: darkorange; font-size: 80%;
         left: 0;
-        bottom :0px;
+        bottom :0;
+        line-height: 70%;
     }
     .hr2 {
         display: flex;
         flex-direction: column;
         top: 5px;
-        left: 0px;
+        left: 0;
         width: 100%;
         height: 8px;
         margin: 0 auto;
@@ -157,7 +164,7 @@
         align-content: center;
         justify-content: flex-start;
         border: 2px chocolate;
-        font-family: Arial;
+        font-family: Arial, serif;
         font-size: 50%;
         padding: 2px;
     }
@@ -185,7 +192,7 @@
 
         justify-content: center;
         background-color: #d7d7de;
-        font-family: Arial;
+        font-family: Arial, serif;
         font-size: 60%;
         color: aquamarine;
 
@@ -205,7 +212,7 @@
         background-color: aqua;
         font-size: 120%;
         padding: 3%;
-        font-family: Arial;
+        font-family: Arial, serif;
     }
     h1{
         font-family: Arial, serif;
@@ -213,7 +220,7 @@
     }
     h2{
         font-family: Arial, serif;
-        font-size: 50%;
+        font-size: 70%;
     }
     .body{
         display: flex;
@@ -250,15 +257,15 @@
         text-anchor: middle;
         background-color: #d7d7de;
         color: darkorange; font-size: 50%;
-        font-family: Arial;
+        font-family: Arial, serif;
         left: 0;
-        bottom :0px;
+        bottom :0;
     }
     .hr2 {
         display: flex;
         flex-direction: column;
         top: 5px;
-        left: 0px;
+        left: 0;
         width: 100%;
         height: 8px;
         margin: 0 auto;
