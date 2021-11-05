@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="ManageStuff.js"></script>
+    <meta charset="UTF-8">
+    <title>AdminAddStudent</title>
+    <link rel="stylesheet" href="sepLogInCSS.css">
+
+</head>
+
+<body style=" background-color: bisque;);">
+<div class="mainStructure">
+    <dif class ="sidebar">
+        <dif class="nav">
+            <ul>
+                <aside class="colorCHok">
+                    <li> <a href="SepareteLogin.html">LogIn Seite</a>  </li>
+                    <li> <a href="AdminSelectPage.html">Auswahlseite</a>  </li>
+                    <li> <a href="StudentCom.html">Student administration</a>  </li>
+                    <li> <a href="StuffCom.html">Stuff administration</a>  </li>
+
+                </aside>
+            </ul>
+        </dif>
+    </dif>
+
+    <div class="body" >
+        <div class="LoginArea">
+            <div class="logIn">
+                <h1>Admin Add Students</h1>
+                <h2> add Students...</h2>
+            </div>
+        </div>
+        <div class="LoginArea">
+            <div class="logIn">
+                <form name="AddStuff" id="addStuff" action="StuffCom.html" onsubmit="return addStuff()" method="post">
+                    <div class="normalText">
+                        <label for="Sudent_Id">Sudent_Id</label>
+                        <input type="text" name="Stuff_Id" id="Sudent_Id"> <br>
+                        <label for="First_Name">First_Name</label>
+                        <input type="text" name="First_Name" id="First_Name"> <br>
+                        <label for="Last_Name">Last_Name</label>
+                        <input type="text" name="Last_Name" id="Last_Name"> <br>
+                        <div class="genderChiose">
+                            <label for="female">gender</label>
+                            <input type="checkbox" id="female">
+                            <label for="male">male</label>
+                            <input type="checkbox" id="male">
+                            <label for="deverse">deverse</label>
+                            <input type="checkbox" id="deverse">
+                            <label for="none">none</label>
+                            <input type="checkbox" id="none">
+
+                        </div>
+                        <label for="DOB">DOB</label>
+                        <input type="text" name="Day of Birth" id="DOB"> <br>
+                        <label for="Department">Department</label>
+                        <select name="courseOptions" id="Department" required onchange="showSelectedList()">
+                            <option value="Maschienenbau">Maschienenbau</option>
+                            <option value="Informatik">Informatik</option>
+                            <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
+                            <option value="Web_Dev.">Web Dev.</option>
+                        </select>
+                        <label for="Mail">Mail</label>
+                        <input type="email" name="Mail" id="Mail"> <br>
+                    </div>
+                    <button id="btnSubmit" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<dif class="footer" >
+    <hr class="hr2"  >
+    <p>Author: Yo Jo</p>
+    <p><a href="mailto:plath.johannes@gmail.com"; style="color: chocolate">plath.johannes@gmail.com</a></p>
+    <p><a href="https://mail.google.com/mail"; style="color: chocolate">oder zu Googlemail und selber schreiben</a></p>
+    <dl>
+        <dt></dt>
+        <dd><a href="Tel:+49-179-3946067" style="color: chocolate">Telef: 0179 394 60 67</a> </dd>
+    </dl>
+    <p><a href="disclaimer.html"; style="color: chocolate">disclaimer</a></p>
+</dif>
+</body>
+</html>

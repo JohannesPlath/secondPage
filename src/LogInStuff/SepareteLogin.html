@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script src="logIn2.js"></script>
+    <meta charset="UTF-8">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="sepLogInCSS.css">
+
+</head>
+<body style="background-color: antiquewhite">
+<div class="LoginArea">
+<div class="logIn">
+
+    <form name="LogIn2" id="logInStyleAdmin" action="AdminSelectPage.html" onsubmit="return logInCheckAdmin()" method="post">
+        <h1>LogIn as Admin:</h1> <br><br>
+        <div class="normalText">
+            <label for="famNameA" label.disabel="false">Nachname:</label>
+            <input autocomplete="off" type="text" name="famNameA" id="famNameA" ><br>
+            <label for="surNameA">Vorname: </label>
+            <input autocomplete="off" type="text" name="surNameA" id="surNameA"><br>
+            <label for="passWordA">Passwort: </label>
+            <input autocomplete="off" type="password" name="passWordA" id="passWordA" ><br>
+        </div>
+
+        <button id="btnSubmit" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+
+
+    </form>
+</div>
+
+<div class="logIn">
+    <form name="LogIn3" id="logInStyleSudent" action="studentsWorkPage.html" onsubmit="return logInCheckStudent()" method="post">
+        <h1>LogIn as Staff:</h1> <br><br>
+        <div class="normalText">
+            <label for="famNameS">Nachname:</label>
+            <input autocomplete="off" type="text" name="famNameS" id="famNameS" ><br>
+            <label for="surNameS">Vorname:</label>
+            <input autocomplete="off" type="text" name="surNameS" id="surNameS"><br>
+            <label for="passWordS">Passwort:</label>
+            <input autocomplete="off" type="password" name="passWordS" id="passWordS" ><br>
+        </div>
+        <button id="btnSubmitStuff"  type="submit" value="Submit" onclick="">Submit</button>
+    </form>
+
+</div>
+
+</div>
+<dif class="footer" >
+    <hr class="hr2"  >
+    <p>Author: Yo Jo</p>
+    <p><a href="mailto:plath.johannes@gmail.com"; style="color: chocolate">plath.johannes@gmail.com</a></p>
+    <p><a href="https://mail.google.com/mail"; style="color: chocolate">oder zu Googlemail und selber schreiben</a></p>
+    <dl>
+        <dt></dt>
+        <dd><a href="Tel:+49-179-3946067" style="color: chocolate">Telef: 0179 394 60 67</a> </dd>
+    </dl>
+    <p><a href="disclaimer.html"; style="color: chocolate">disclaimer</a></p>
+</dif>
+</body>
+</html>

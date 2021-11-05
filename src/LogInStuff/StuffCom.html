@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>StuffManagement</title>
+    <link rel="stylesheet" href="sepLogInCSS.css">
+
+
+</head>
+
+
+<body style=" background-color: bisque;">
+<div class="mainStructure">
+    <dif class ="sidebar">
+        <dif class="nav">
+            <ul>
+                <li> <a href="SepareteLogin.html">LogIn Seite</a>  </li>
+                <li> <a href="AdminSelectPage.html">Auswahlseite</a>  </li>
+                <li> <a href="StudentCom.html">Student administration</a>  </li>
+                <li> <a href="StuffCom.html">Stuff administration</a>  </li>
+            </ul>
+        </dif>
+    </dif>
+
+<div class="body" >
+    <div class="LoginArea">
+    <form  class="AdminAdminConSelectBottom">
+        <h1>Stuffmanagement</h1>
+        <br>
+    </form>
+    <div class="AdminSelectBottom">
+        <form action="AdminAddStuff.html">
+            <div class="normalText">
+                <button id="AddStuffBotton" type="submit"  >Add: </button>
+            </div>
+        </form>
+    </div>
+    <div class="AdminSelectBottom">
+    <div class="normalText">
+        <form action="none">
+            <button id="UpdateStuffButton" type="submit"  >Remove: </button>
+        </form>
+    </div>
+    </div>
+    <div class="AdminSelectBottom">
+        <div class="normalText">
+        <form action="none">
+            <button id="RemoveStuffButton" type="submit"  >Update: </button>
+        </form>
+    </div>
+    </div>
+    </div>
+    <br>
+
+    <select name="courseOptions" id="Department" required onchange="showSelectedList()">
+        <option value="Maschienenbau">Maschienenbau</option>
+        <option value="Informatik">Informatik</option>
+        <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
+        <option value="Web_Dev.">Web Dev.</option>
+    </select>
+    <div class="liste">
+    <ul>
+        <h2>actual list of Students</h2>
+        <li>Stuff</li>
+        <li>Stuff</li>
+        <li>Stuff</li>
+        <li>Stuff</li>
+        <li>Stuff</li>
+    </ul>
+    </div>
+
+</div>
+    <dif class="footer" >
+        <hr class="hr2"  >
+        <p>Author: Yo Jo</p>
+        <p><a href="mailto:plath.johannes@gmail.com"; style="color: chocolate">plath.johannes@gmail.com</a></p>
+        <p><a href="https://mail.google.com/mail"; style="color: chocolate">oder zu Googlemail und selber schreiben</a></p>
+        <dl>
+            <dt></dt>
+            <dd><a href="Tel:+49-179-3946067" style="color: chocolate">Telef: 0179 394 60 67</a> </dd>
+        </dl>
+        <p><a href="disclaimer.html"; style="color: chocolate">disclaimer</a></p>
+    </dif>
+
+</div>
+</body>
+</html>
