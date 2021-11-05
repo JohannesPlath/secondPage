@@ -42,6 +42,7 @@
         flex-direction: row;
         flex-flow: row;
         Justify-content: center;
+        min-width: fit-content;
         list-style-type: georgian;
         max-width: 80%;
         border: 20px solid wheat;
