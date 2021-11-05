@@ -1,0 +1,26 @@
+li{
+    display: flex;
+    flex-direction:row ;
+    flex-grow: 1;
+    margin: 0.5em;
+    padding: 0 20px
+}
+li:nth-child(2n) {
+    border: 1px solid aquamarine;
+    background-color: brown;
+}
+
+.music-list {
+
+    display: flex;
+    flex-direction:row;
+    border: 1px solid aquamarine;
+
+}
+p{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+    padding: 0.3em;
+    text-align: left;
+}

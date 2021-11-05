@@ -1,0 +1,36 @@
+
+@media screen and (min-width:550px) {
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row;
+        Justify-content: center;
+        list-style-type: none;
+        display: flex;
+        border: 1px solid aquamarine;
+        background-color: brown;
+
+    }
+}
+
+@media screen and (max-width:550px){
+
+    ul{
+        display: flex;
+        flex-direction: column;
+
+        list-style-type: none;
+        display: flex;
+        border: 1px solid aquamarine;
+        background-color: brown;
+
+    }
+
+}
+
+li{
+    width: 10em;
+    height: 3em;
+    background-color: aqua;
+    margin: 0.1em;
+}
