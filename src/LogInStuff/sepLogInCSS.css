@@ -1,5 +1,20 @@
 
 @media screen and (min-width:550px){
+    .red{
+        background-color: crimson;
+    }
+    .orange{
+        background-color: darkorange;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .green{
+        background-color: #1ca45a;
+    }
+    .default{
+
+    }
     .mainStructure{
         display: flex;
         flex-direction: column;

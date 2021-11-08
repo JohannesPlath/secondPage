@@ -2,9 +2,11 @@
 <html lang="de">
 <head>
     <script src="accountcheck.js"></script>
+
     <meta charset="UTF-8">
     <title>LogIn</title>
     <link rel="stylesheet" href="sepLogInCSS.css">
+
 
 </head>
 <body style="background-color: antiquewhite">
@@ -12,15 +14,17 @@
 <div class="LoginArea" style="left: 20%">
     <div class="logIn">
 
-        <form name="LogIn4" id="newAccount" action="AdminSelectPage.html" onsubmit="return newAccount()" method="post"  >
+        <form name="LogIn4" id="newAccount" action="studentsWorkPage.html" onsubmit="return newAccount()" method="post"  >
             <h1>Daten eingeben:</h1> <br><br>
             <div class="normalText">
                 <label for="famNameL" >Nachname:</label>
                 <input autocomplete="off" type="text" name="famNameL" id="famNameL" ><br>
                 <label for="surNameL">Vorname: </label>
                 <input autocomplete="off" type="text" name="surNameL" id="surNameL"><br>
-                <label for="passWordL">Passwort: </label>
-                <input autocomplete="off" type="password" name="passWordL" id="passWordL" ><br>
+
+                <label for="passWordL" >Passwort: </label>
+                <input autocomplete="off" class="default" type="password" name="passWordL" id="passWordL" ><br>
+
                 <label for="ConfpassWordL">Confirm Passwort: </label>
                 <input autocomplete="off" type="password" name="ConfpassWordL" id="ConfpassWordL" ><br>
 
@@ -29,28 +33,29 @@
 
         </form>
     </div>
-<!--
 
     <div class="logIn">
 
-        <form name="LogIn5" id="newAccountalternative" action="asd.html" onsubmit="return newAccount2()" method="post"  >
+        <form name="LogIn5" id="newAccountalternative" action="asd.html" onsubmit="return ASDnewAccount2()" method="post"  >
             <h1>Daten eingeben:</h1> <br><br>
             <div class="normalText">
-                <label for="famNameL" >Nachname:</label>
-                <input autocomplete="off" type="text" name="famNameL" id="famNameAL" ><br>
-                <label for="surNameL">Vorname: </label>
-                <input autocomplete="off" type="text" name="surNameL" id="surNameL"><br>
-                <label for="passWordL">Passwort: </label>
-                <input autocomplete="off" type="password" name="passWordL" id="passWordL" ><br>
-                <label for="ConfpassWordL">Confirm Passwort: </label>
-                <input autocomplete="off" type="password" name="ConfpassWordL" id="ConfpassWordL" ><br>
+
+                <label for="famNameAL" >Nachname:</label>
+                <input autocomplete="off" type="text" name="famNameAL" id="famNameAL" minlength="2" max=" 33" ><br>
+
+                <label for="surNameAL">Vorname: </label>
+                <input autocomplete="off" type="text" name="surNameAL" id="surNameAL" maxlength="2" max=" 33" ><br>
+                <label for="passWordAL">Passwort: </label>
+                <input autocomplete="off" type="password" name="passWordAL" id="passWordAL" placeholder="MIN 8" minlength="8"  TITLE="1 of Each: 0-9; A-Z, a-z, !@'$%^&*" pattern="([A-Z]{1,99},[a-z]{1,99})"  min="8"><br>
+                <label for="ConfpassWordAL">Confirm Passwort: </label>
+                <input autocomplete="off" type="password" name="ConfpassWordAL" id="ConfpassWordAL" min="1"><br>
+
 
             </div>
-            <button id="btnSubmitL" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+            <button id="btnSubmitAL" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
 
         </form>
     </div>
--->
 
 
     <dif class="footer" >
