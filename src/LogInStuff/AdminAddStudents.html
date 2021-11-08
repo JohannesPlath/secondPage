@@ -33,7 +33,7 @@
         </div>
         <div class="LoginArea">
             <div class="logIn">
-                <form name="AddStuff" id="addStuff" action="StuffCom.html" onsubmit="return addStuff()" method="post">
+                <form name="AddStuff" id="addStuff" action="StudentCom.html" onsubmit="return addStuff()" method="post">
                     <div class="normalText">
                         <label for="Sudent_Id">Sudent_Id</label>
                         <input type="text" name="Stuff_Id" id="Sudent_Id"> <br>
@@ -42,20 +42,17 @@
                         <label for="Last_Name">Last_Name</label>
                         <input type="text" name="Last_Name" id="Last_Name"> <br>
                         <div class="genderChiose">
-                            <label for="female">gender</label>
-                            <input type="checkbox" id="female">
-                            <label for="male">male</label>
-                            <input type="checkbox" id="male">
-                            <label for="deverse">deverse</label>
-                            <input type="checkbox" id="deverse">
-                            <label for="none">none</label>
-                            <input type="checkbox" id="none">
-
+                            <input type="radio" name="female" value="female"> female<br>
+                            <input type="radio" name="male" value="male"> male<br>
+                            <input type="radio" name="deverse" value="deverse"> deverse <br>
+                            <input type="radio" name="unknown" value="unknown">  unknown<br>
                         </div>
+
                         <label for="DOB">DOB</label>
-                        <input type="text" name="Day of Birth" id="DOB"> <br>
+                        <input type="date" name="Day of Birth" id="DOB"> <br>
                         <label for="Department">Department</label>
-                        <select name="courseOptions" id="Department" required onchange="showSelectedList()">
+
+                        <select name="courseOptions" class="dropdown" id="Department" required onchange="showSelectedList() " >
                             <option value="Maschienenbau">Maschienenbau</option>
                             <option value="Informatik">Informatik</option>
                             <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>

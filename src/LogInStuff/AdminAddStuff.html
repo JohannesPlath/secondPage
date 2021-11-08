@@ -51,9 +51,15 @@
                         <label for="none">none</label>
                         <input type="checkbox" id="none">
                     </div>
+                    <div class="genderChiose">
+                        <input type="radio" name="gender" value="female"> female<br>
+                        <input type="radio" name="gender" value="male"> male<br>
+                        <input type="radio" name="gender" value="deverse"> deverse <br>
+                        <input type="radio" name="gender" value="unknown">  unknown<br>
+                    </div>
 
                     <label for="DOB">DOB</label>
-                    <input type="text" name="Day of Birth" id="DOB"> <br>
+                    <input type="date" name="Day of Birth" id="DOB"> <br>
                     <label for="Department">Department</label>
                     <select name="courseOptions" id="Department" required onchange="showSelectedList()">
                         <option value="Maschienenbau">Maschienenbau</option>
