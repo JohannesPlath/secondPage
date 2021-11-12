@@ -1,5 +1,20 @@
 
 @media screen and (min-width:550px){
+    .red{
+        background-color: crimson;
+    }
+    .orange{
+        background-color: darkorange;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .green{
+        background-color: #1ca45a;
+    }
+    .default{
+
+    }
     .mainStructure{
         display: flex;
         flex-direction: column;
@@ -16,10 +31,9 @@
         min-width: 130px;
         height: 100%;
         background-color: #d7d7de;
-        font-family: Arial, serif;
+        font-family: Arial,serif;
         font-size: 80%;
-        color: blue;
-
+        color: aquamarine;
 
     }
     .none{
@@ -48,13 +62,13 @@
         border: 20px solid wheat;
         border-radius: 10%;
         background-color: aquamarine;
-        padding: 2%;
+        padding: 3%;
     }
     .logIn{
         display: flex;
         flex-direction: column;
         border: 1px solid blueviolet;
-        border-radius: 10%;
+        border-radius: 5%;
         background-color: aquamarine;
         padding: 3%;
         font-family: Arial, monospace;
@@ -63,9 +77,7 @@
         display: flex;
         flex-direction: column;
         flex-flow: column;
-        Justify-content: center;
         position: absolute;
-
         top: 2%;
         left: 25%;
         right: 5%;
@@ -127,6 +139,11 @@
         position: center;
         font-size: 80%;
     }
+    .dropdown{
+        width: fit-content;
+        border: 5px;
+
+    }
     .footer{
         position: absolute;
         width: 100%; height: 20%;
@@ -147,7 +164,7 @@
         top: 5px;
         left: 0;
         width: 100%;
-        height: 8px;
+        height: 5%;
         margin: 0 auto;
         color: aquamarine;
 
@@ -156,6 +173,7 @@
     .genderChiose{
         display: flex;
         flex-direction: row;
+        font-size: small;
     }
 }
 @media screen and (max-width:550px) {
@@ -164,9 +182,9 @@
         flex-direction: column;
         align-content: center;
         justify-content: flex-start;
-        border: 2px chocolate;
-        font-family: Arial, serif;
-        font-size: 50%;
+        border: 4px chocolate;
+        font-family: Arial,serif;
+        font-size: small;
         padding: 2px;
     }
 
@@ -179,7 +197,7 @@
         border: 2px solid wheat;
         background-color: aqua;
         padding: 2%;
-        font-size: 50%;
+        font-size: 70%;
     }
     .mainStructure{
         display: flex;
@@ -193,10 +211,16 @@
 
         justify-content: center;
         background-color: #d7d7de;
-        font-family: Arial, serif;
+        font-family: Arial,serif;
         font-size: 60%;
         color: aquamarine;
 
+    }
+
+    .genderChiose{
+        display: flex;
+        flex-direction: row;
+        left: 10%;
     }
     #StudentsButton{
         width:fit-content;
@@ -213,7 +237,7 @@
         background-color: aqua;
         font-size: 120%;
         padding: 3%;
-        font-family: Arial, serif;
+        font-family: Arial,serif;
     }
     h1{
         font-family: Arial, serif;
@@ -221,13 +245,13 @@
     }
     h2{
         font-family: Arial, serif;
-        font-size: 70%;
+        font-size: 90%;
     }
     .body{
         display: flex;
         flex-direction: column;
         background-color: burlywood;
-        font-size: 80%;
+        font-size: 70%;
         position: relative;
     }
     .normalText{
@@ -243,7 +267,7 @@
         flex-grow: 1;
         text-anchor: end;
         flex-shrink: 1;
-        font-size: 30%;
+        font-size: 60%;
         border: 1px #28e582 ;
     }
     .genderChiose{
@@ -258,15 +282,16 @@
         text-anchor: middle;
         background-color: #d7d7de;
         color: darkorange; font-size: 50%;
-        font-family: Arial, serif;
+        font-family: Arial,serif;
         left: 0;
-        bottom :0;
+        bottom :0px;
+        line-height: 50%;
     }
     .hr2 {
         display: flex;
         flex-direction: column;
         top: 5px;
-        left: 0;
+        left: 0px;
         width: 100%;
         height: 8px;
         margin: 0 auto;

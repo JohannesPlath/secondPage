@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <script src="accountcheck.js"></script>
+
+    <meta charset="UTF-8">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="sepLogInCSS.css">
+
+
+</head>
+<body style="background-color: antiquewhite">
+
+<div class="LoginArea" style="left: 20%">
+    <div class="logIn">
+
+        <form name="LogIn4" id="newAccount" action="studentsWorkPage.html" onsubmit="return newAccount()" method="post"  >
+            <h1>Daten eingeben:</h1> <br><br>
+            <div class="normalText">
+                <label for="famNameL" >Nachname:</label>
+                <input autocomplete="off" type="text" name="famNameL" id="famNameL" ><br>
+                <label for="surNameL">Vorname: </label>
+                <input autocomplete="off" type="text" name="surNameL" id="surNameL"><br>
+
+                <label for="passWordL" >Passwort: </label>
+                <input autocomplete="off" class="default" type="password" name="passWordL" id="passWordL" ><br>
+
+                <label for="ConfpassWordL">Confirm Passwort: </label>
+                <input autocomplete="off" type="password" name="ConfpassWordL" id="ConfpassWordL" ><br>
+
+            </div>
+            <button id="btnSubmitL" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+
+        </form>
+    </div>
+
+    <div class="logIn">
+
+        <form name="LogIn5" id="newAccountalternative" action="asd.html" onsubmit="return ASDnewAccount2()" method="post"  >
+            <h1>Daten eingeben:</h1> <br><br>
+            <div class="normalText">
+
+                <label for="famNameAL" >Nachname:</label>
+                <input autocomplete="off" type="text" name="famNameAL" id="famNameAL" minlength="2" max=" 33" ><br>
+
+                <label for="surNameAL">Vorname: </label>
+                <input autocomplete="off" type="text" name="surNameAL" id="surNameAL" maxlength="2" max=" 33" ><br>
+                <label for="passWordAL">Passwort: </label>
+                <input autocomplete="off" type="password" name="passWordAL" id="passWordAL" placeholder="MIN 8" minlength="8"  TITLE="1 of Each: 0-9; A-Z, a-z, !@'$%^&*" pattern="([A-Z]{1,99},[a-z]{1,99})"  min="8"><br>
+                <label for="ConfpassWordAL">Confirm Passwort: </label>
+                <input autocomplete="off" type="password" name="ConfpassWordAL" id="ConfpassWordAL" min="1"><br>
+
+
+            </div>
+            <button id="btnSubmitAL" button.disabled="false" type="submit" value="Submit" onclick="">Submit</button>
+
+        </form>
+    </div>
+
+
+    <dif class="footer" >
+        <hr class="hr2"  >
+        <p>Author: Yo Jo</p>
+        <p><a href="mailto:plath.johannes@gmail.com" ; style="color: chocolate">plath.johannes@gmail.com</a></p>
+        <p><a href="https://mail.google.com/mail" ; style="color: chocolate">oder zu Googlemail und selber schreiben</a></p>
+        <dl>
+            <dd><a href="Tel:+49-179-3946067" style="color: chocolate">0179 394 60 67</a> </dd>
+        </dl>
+        <p><a href="disclaimerOhneSidebar.html" ; style="color: chocolate">disclaimer</a></p>
+    </dif>
+</div>
+
+</body>
+</html>

@@ -1,3 +1,15 @@
+
+
+function showPassw() {
+    if (document.getElementById('passWordA').type == 'password') {
+        document.getElementById('passwd').setAttribute('type', 'text')
+        this.innerText = 'Passwort verstecken';
+    } else {
+        document.getElementById('passWordA').type == 'password';
+        this.innerText = 'Show Passwort ';
+    }
+}
+
 var counter = 4;
 function logInCheckAdmin() {
     counter --;
@@ -14,21 +26,21 @@ function logInCheckAdmin() {
         alert("Irgendwas muss da schon rein...!\n noch: "+counter+" Versuche");
         return false;
     } else if (famNameA !== "admin") {
-        alert("‘Login Credentials Incorrect\n noch: "+counter+" Versuche")
+        alert("‘Login Credentials Incorrect\n noch: "+counter+" Versuche");
         return false;
     } else if (surNameA == null || "") {
         alert("Irgendwas muss da schon rein...\n noch: "+counter+" Versuche");
         return false;
     } else if (surNameA !== "admin") {
-        alert("‘Login Credentials Incorrect\n noch: "+counter+" Versuche")
+        alert("‘Login Credentials Incorrect\n noch: "+counter+" Versuche");
         return false;
     } else if (passWordA == null || "") {
         alert("Irgendwas muss da schon rein...\n noch: "+counter+" Versuche");
         return false;
     } else if (passWordA !== "admin") {
-            alert("‘Login Credentials Incorrect\n noch: "+counter+" Versuche")
+            alert("‘Login Credentials Incorrect\n noch: "+counter+" Versuche");
             return false;
-        }
+    }
 
 
 
@@ -45,24 +57,25 @@ function logInCheckStudent() {
         alert("zu oft falsch")
         return false;
     }else if (famNameS == null || famNameS === "") {
-        alert("Irgendwas muss da schon rein...");
+        alert("Irgendwas muss da schon rein...\n noch: "+counter2+" Versuche");
         return false;
     } else if (famNameS !== "pl") {
-        alert("‘Login Credentials Incorrect")
+        alert("‘Login Credentials Incorrect\n noch: "+counter2+" Versuche");
         return false;
     } else if (surNameS == null || "") {
-        alert("Irgendwas muss da schon rein...");
+        alert("Irgendwas muss da schon rein...\n noch: "+counter2+" Versuche");
         return false;
     } else if (surNameS !== "jo") {
-        alert("‘Login Credentials Incorrect")
+        alert("‘Login Credentials Incorrect\n noch: "+counter2+" Versuche");
         return false;
     } else if (passWordS == null || "") {
-        alert("Irgendwas muss da schon rein...");
+        alert("Irgendwas muss da schon rein...\n noch: "+counter2+" Versuche");
         return false;
     } else if (passWordS !== "123") {
-        alert("‘Login Credentials Incorrect")
+        alert("‘Login Credentials Incorrect\n noch: "+counter2+" Versuche");
         return false;
     }
     window.location.href = "studentsWorkPage.html"
-    /* return true;*/
+
 }
+
