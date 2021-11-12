@@ -25,22 +25,40 @@ function newAccount() {
         alert("Irgendwas muss da schon rein...!\n noch: ");
         return false;
     }
+    if (surNameL == null || surNameL === "") {
+        alert("Irgendwas muss da schon rein...!\n noch: ");
+        return false;
+    }
     if ((countOfSpecialSign > 0)) {
         securityLevelPassw++;
         setBackroundcolor(securityLevelPassw);
-
     }
     if ((countOfSpecialSign <= 0)) {
         alert(" minimum 1 of : ! @ ' $ % ^ & *")
-        return false;
     }
-    if ((countOfLowerCase >= 0) || (countOfUpperCase >= 0) || (countOfNumber >= 0)) {
+    if ((countOfLowerCase >= 0)) {
         securityLevelPassw++;
         setBackroundcolor(securityLevelPassw);
     }
-    if (((countOfLowerCase < 0) || (countOfUpperCase < 0)) || (countOfNumber < 0)) {
-        alert(" minimum a lower- and uppercase and an number ");
-        return false;
+    if ((countOfUpperCase >= 0)) {
+        securityLevelPassw++;
+        setBackroundcolor(securityLevelPassw);
+    }
+    if ((countOfNumber >= 0)) {
+        securityLevelPassw++;
+        setBackroundcolor(securityLevelPassw);
+    }
+    if ((countOfLowerCase < 0)) {
+        alert(" minimum a lowercase letter");
+
+    }
+    if ((countOfUpperCase < 0))  {
+        alert(" minimum an uppercase letter ");
+
+    }
+    if ((countOfNumber < 0)) {
+        alert(" minimum a number ");
+
     }
     if ((passWordL.length >= 8)) {
         securityLevelPassw++;
@@ -48,17 +66,13 @@ function newAccount() {
     }
     if (((passWordL.length < 8))) {
         alert(" minimum count of Character: 8 !");
-        return false;
     }
-    if (surNameL == null || surNameL === "") {
-        alert("Irgendwas muss da schon rein...!\n noch: ");
-        return false;
-    }
+
     if (passWordL !== ConfpassWordS) {
         alert("password not eqaul!");
         return false;
     }
-    if (securityLevelPassw < 3) {
+    if (securityLevelPassw < 5) {
         setBackroundcolor(securityLevelPassw);
         return false;
     }
@@ -68,14 +82,16 @@ function newAccount() {
 
 function setBackroundcolor( level){
 
-    if (level === 0 ) {
+    if (level === 1 ) {
         document.getElementById("passWordL").setAttribute('class', 'red')
-    }if (level === 1 ) {
-        document.getElementById("passWordL").setAttribute('class', 'orange')
     }if (level === 2 ) {
+        document.getElementById("passWordL").setAttribute('class', 'lightred')
+    }if (level === 3 ) {
+        document.getElementById("passWordL").setAttribute('class', 'orange')
+    }if (level === 4 ) {
         document.getElementById("passWordL").setAttribute('class', 'yellow' )
     }
-    if (level === 3 ) {
+    if (level === 5 ) {
         document.getElementById("passWordL").setAttribute('class', 'green' )
     }
 
