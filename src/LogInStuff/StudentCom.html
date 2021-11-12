@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="Students"></script>
+    <script src="StudentsCom.js"></script>
     <meta charset="UTF-8">
     <title>StudentAdministration</title>
     <link rel="stylesheet" href="sepLogInCSS.css">
@@ -52,10 +54,34 @@
         </div>
     </div>
 <br>
+<div CLASS="LoginArea" style="justify-content: space-around">
+    <div class="drum" style="position: center">
+        <select name="courseOptions" class="dropdown" id="SS/WS" required onchange="showSelectedList()" style="left: 300px">
+            <option value="Summer">Select by SummerS.</option>
+            <option value="Winter">Select by WinterS.</option>
+
+        </select>
+    </div>
+    <br>
+    <div class="drum" style="position: center">
+        <select name="courseOptions" class="dropdown" id="Department" required onchange="showSelectedList()" style="left: 300px">
+            <option value="Maschienenbau">Maschienenbau</option>
+            <option value="Informatik">Informatik</option>
+            <option value="Wirtschaftswissenschaft">Wirtschaftswissenschaft</option>
+            <option value="Web_Dev.">Web Dev.</option>
+        </select>
+    </div>
+
+
+
+</div>
+
+
 <div class="list">
 <ul>
     <h2>actual list of students</h2>
-    <li>Student</li>
+    <li>Student:</li>
+
     <li>Student</li>
     <li>Student</li>
     <li>Student</li>
