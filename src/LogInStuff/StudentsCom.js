@@ -76,7 +76,27 @@ let searchedStudentsIT = Students.filter (function (e) {
         return e.Department == "IT";
     });
 
+/*
 function loadJSON(" ./Students.json", function(text){
     var data = JSON.parse(text);
     console.log(data);
-});
+});*/
+
+/*
+function filterDepartment(students, Department) {
+    return students.filter(function (e){
+        return e.Department===Department
+    });
+}
+
+function filterJoiningYear(students, Semester){
+    if(Semester==="Summer"){
+        return students.filter(function (e){
+            return e.JoiningDate.slice(5,7) >= 4 && e.JoiningDate.slice(5,7) <=9
+        });} else if (Semester==="Winter"){
+        return students.filter(function (e){
+            return e.JoiningDate.slice(5,7) >= 9 || e.JoiningDate.slice(5,7) <=1
+        });
+    }
+
+}*/
