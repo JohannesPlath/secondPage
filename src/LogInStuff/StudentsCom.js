@@ -71,6 +71,11 @@ var Students = [
     }
 
 ]
+function showSelectedList(){
+    if (typeof document.getElementById("SS/WS") == "Summer")
+        filterJoiningYear(Students, )
+}
+
 
 let searchedStudentsIT = Students.filter (function (e) {
         return e.Department == "IT";
@@ -82,7 +87,6 @@ function loadJSON(" ./Students.json", function(text){
     console.log(data);
 });*/
 
-/*
 function filterDepartment(students, Department) {
     return students.filter(function (e){
         return e.Department===Department
@@ -99,4 +103,4 @@ function filterJoiningYear(students, Semester){
         });
     }
 
-}*/
+}
