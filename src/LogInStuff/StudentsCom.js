@@ -15,7 +15,7 @@ var Students = [
         "LastName": "Harris",
         "Gender": "2",
         "DOB": "1990/07/25",
-        "Department": "IT",
+        "Department": "Wirtschaftswissenschaft",
         "EmailID": "joesyH@gmail.com",
         "JoiningYr": "2019.10.01"
     },
@@ -71,7 +71,7 @@ var Students = [
     {
         "ID": "9",
         "FirstName": "Tomas",
-        "LastName ": "Cock ",
+        "LastName": "Cock ",
         "Gender": "1",
         "DOB": "1995/08/25",
         "Department": "IT",
@@ -127,6 +127,23 @@ function showSelectedList() {
     showFiltered(actualList);
 }
 
+
+function filterListe(students, Semester, department) {
+    if (Semester === "Summer") {
+        return students.filter(function (student) {
+            var month = parseInt(student.JoiningYr.slice(5, 7))
+            return  month === 4 && department == student.Department
+        });
+    } else if (Semester === "Winter") {
+        return students.filter(function (student) {
+            var month = parseInt(student.JoiningYr.slice(5, 7))
+            return month === 10  && department == student.Department
+        });
+    }
+
+}
+
+
 function showFiltered(students) {
     var ul = document.getElementById("actualisedList");
     while (ul.firstChild)
@@ -158,20 +175,7 @@ function filterDepartment(students, Department) {
     });
 }
 
-function filterListe(students, Semester, department) {
-    if (Semester === "Summer") {
-        return students.filter(function (student) {
-            var month = parseInt(student.JoiningYr.slice(5, 7))
-            return month === 4
-        });
-    } else if (Semester === "Winter") {
-        return students.filter(function (student) {
-            var month = parseInt(student.JoiningYr.slice(5, 7))
-            return month === 10
-        });
-    }
 
-}
 
 
 function requestJson() {

@@ -1,3 +1,68 @@
+function colorCheck() {
+    let securityLevelPassw =1;
+
+
+    passWordL = document.forms["LogIn4"]["passWordL"].value;
+    var ConfpassWordS = document.forms["LogIn4"]["ConfpassWordL"].value;
+
+    var mustHaveSpeciealSign = /[! @'$%^&*]/;
+    var countOfSpecialSign = passWordL.search(mustHaveSpeciealSign);
+
+    var mustHaveUpCase = /[A-Z]/;
+    var mustHaveLowCase = /[a-z]/;
+    var mustHaveNumber = /[0-1]/;
+
+    var countOfUpperCase = passWordL.search(mustHaveUpCase);
+    var countOfLowerCase = passWordL.search(mustHaveLowCase);
+    var countOfNumber = passWordL.search(mustHaveNumber);
+
+    setBackroundcolor(securityLevelPassw);
+
+    if ((countOfSpecialSign > 0)) {
+        securityLevelPassw++;
+        setBackroundcolor(securityLevelPassw);
+    }
+    if ((countOfSpecialSign <= 0)) {
+
+    }
+    if ((countOfLowerCase >= 0)) {
+        securityLevelPassw++;
+        setBackroundcolor(securityLevelPassw);
+    }
+    if ((countOfUpperCase >= 0)) {
+        securityLevelPassw++;
+        setBackroundcolor(securityLevelPassw);
+    }
+    if ((countOfNumber >= 0)) {
+        securityLevelPassw++;
+        setBackroundcolor(securityLevelPassw);
+    }
+    if ((countOfLowerCase < 0)) {
+
+
+    }
+    if ((countOfUpperCase < 0))  {
+
+    }
+    if ((countOfNumber < 0)) {
+
+    }
+    if ((passWordL.length >= 8)) {
+        securityLevelPassw++;
+        setBackroundcolor(securityLevelPassw);
+    }
+    if (((passWordL.length < 8))) {
+    }
+
+    if (passWordL !== ConfpassWordS) {
+        return false;
+    }
+    if (securityLevelPassw < 5) {
+        setBackroundcolor(securityLevelPassw);
+        return false;
+    }
+
+}
 
 var passWordL = null;
 function newAccount() {

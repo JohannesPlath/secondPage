@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+            console.log('DOM fully loaded and parsed');
+            requestJson();
+        });
+    </script>
+    <script src="stuffCom.js"></script>
     <meta charset="UTF-8">
     <title>StuffManagement</title>
     <link rel="stylesheet" href="sepLogInCSS.css">
@@ -61,14 +67,11 @@
     </select>
     </div>
     <div class="liste">
-    <ul>
         <h2>actual list of Students</h2>
-        <li>Stuff</li>
-        <li>Stuff</li>
-        <li>Stuff</li>
-        <li>Stuff</li>
-        <li>Stuff</li>
-    </ul>
+
+         <ul id="actualStuffList">
+
+         </ul>
     </div>
 
 </div>

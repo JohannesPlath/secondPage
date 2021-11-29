@@ -178,6 +178,11 @@
         flex-direction: row;
         font-size: small;
     }
+    .actualisedList{
+        font-size: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 @media screen and (max-width:550px) {
     .AdminSelectBottom{
@@ -303,7 +308,8 @@
         background: brown;
     }
     .list{
-        font-size: 50%;
+        font-size: 70%;
+        justify-content: center;
     }
 }
 
