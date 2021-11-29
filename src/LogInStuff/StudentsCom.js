@@ -8,7 +8,7 @@ var Students = [
         "DOB  ": "1995/08/25",
         "Department": "IT",
         "EmailID ": "tomholland@gmail.com",
-        "JoiningYr " : "2019.10.01"
+        "JoiningYr" : "2019.10.01"
     },
     {
         "ID": "3",
@@ -18,7 +18,7 @@ var Students = [
         "DOB": "1990/07/25",
         "Department": "IT",
         "EmailID ": "joesyH@gmail.com",
-        "JoiningYr ": "2019.10.01"
+        "JoiningYr": "2019.10.01"
     },
     {
         "ID": "4",
@@ -28,7 +28,7 @@ var Students = [
         "DOB": "1995/07/25",
         "Department": "Maschienenbau",
         "EmailID ": "joeharry@gmail.com",
-        "JoiningYr ": "2020.04.01"
+        "JoiningYr": "2020.04.01"
     }, {
         "ID": "5",
         "FirstName": "Pitt",
@@ -37,7 +37,7 @@ var Students = [
         "DOB": "1994/07/25",
         "Department": "WEB",
         "EmailID ": "PiPy@gmail.com",
-        "JoiningYr ": "2021.04.01"
+        "JoiningYr": "2021.04.01"
     },
     {
         "ID": "6",
@@ -47,7 +47,7 @@ var Students = [
         "DOB": "1994/07/25",
         "Department": "Maschienenbau",
         "EmailID ": "joeharry@gmail.com",
-        "JoiningYr ": "2020.10.01"
+        "JoiningYr": "2020.10.01"
     },
     {
         "ID": "7",
@@ -57,7 +57,7 @@ var Students = [
         "DOB": "1998/07/25",
         "Department": "IT",
         "EmailID ": "joesyH@gmail.com",
-        "JoiningYr ": "2020.04.01"
+        "JoiningYr": "2020.04.01"
     },
     {
         "ID": "8",
@@ -67,7 +67,7 @@ var Students = [
         "DOB": "1980/07/25",
         "Department": "WEB",
         "EmailID ": "BeBro@gmail.com",
-        "JoiningYr ": "2020.10.01"
+        "JoiningYr": "2020.10.01"
     },
     {
         "ID": "9",
@@ -77,7 +77,7 @@ var Students = [
         "DOB  ": "1995/08/25",
         "Department": "IT",
         "EmailID ": "tomcock@gmail.com",
-        "JoiningYr " : "2019.10.01"
+        "JoiningYr" : "2019.10.01"
     }, {
         "ID": "10",
         "FirstName": "Patty",
@@ -86,7 +86,7 @@ var Students = [
         "DOB": "1994/05/05",
         "Department": "WEB",
         "EmailID ": "papoo@gmail.com",
-        "JoiningYr ": "2019.04.01"
+        "JoiningYr": "2019.04.01"
     },
     {
         "ID": 11,
@@ -96,7 +96,7 @@ var Students = [
         "DOB": "1980/06/25",
         "Department": "Maschienenbau",
         "EmailID ": "dragQuee69@gmail.com",
-        "JoiningYr ": "2018.10.01"
+        "JoiningYr": "2018.10.01"
     },
     {
         "ID": "12",
@@ -106,7 +106,7 @@ var Students = [
         "DOB": "1998/10/25",
         "Department": "IT",
         "EmailID ": "phimo@yahoo.com",
-        "JoiningYr ": "2020.04.01"
+        "JoiningYr": "2020.04.01"
     }, {
         "ID": "13",
         "FirstName": "Marty",
@@ -115,14 +115,15 @@ var Students = [
         "DOB": "1994/07/25",
         "Department": "WEB",
         "EmailID ": "marfly@gmail.com",
-        "JoiningYr ": "2020.10.01"
+        "JoiningYr": "2020.10.01"
     },
 
 
 ]
 function showSelectedList(){
     let element = document.getElementById("SS/WS")
-    filterJoiningYear(Students, element.value)
+    var test = filterJoiningYear(Students, element.value)
+    console.log(test)
 }
 
 
@@ -137,22 +138,20 @@ function loadJSON(" ./Students.json", function(text){
 });*/
 
 function filterDepartment(students, Department) {
-    return students.filter(function (e){
-        return e.Department===Department
+    return students.filter(function (student){
+        return student.Department===Department
     });
 }
 
 function filterJoiningYear(students, Semester){
-
-    console.log("ilterJoiningYear(students, Semester");
     if(Semester==="Summer"){
-        return students.filter(function (e){
-            var dateSliceArea = e.JoiningYr.slice(6,8)
+        return students.filter(function (student){
+            var dateSliceArea = student.JoiningYr.slice(5,7)
             return dateSliceArea >= 4 && dateSliceArea <=9
         });
     } else if (Semester==="Winter"){
-        return students.filter(function (e){
-            var dateSliceArea = e.JoiningYr.slice(6,8)
+        return students.filter(function (student){
+            var dateSliceArea = student.JoiningYr.slice(5,7)
             return dateSliceArea >= 9 && dateSliceArea <=1
         });
     }
