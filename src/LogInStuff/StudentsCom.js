@@ -143,14 +143,17 @@ function filterDepartment(students, Department) {
 }
 
 function filterJoiningYear(students, Semester){
+
     console.log("ilterJoiningYear(students, Semester");
     if(Semester==="Summer"){
         return students.filter(function (e){
-            return e.JoiningDate.slice(5,7) >= 4 && e.JoiningDate.slice(5,7) <=9
+            var dateSliceArea = e.JoiningYr.slice(6,8)
+            return dateSliceArea >= 4 && dateSliceArea <=9
         });
     } else if (Semester==="Winter"){
         return students.filter(function (e){
-            return e.JoiningDate.slice(5,7) >= 9 || e.JoiningDate.slice(5,7) <=1
+            var dateSliceArea = e.JoiningYr.slice(6,8)
+            return dateSliceArea >= 9 && dateSliceArea <=1
         });
     }
 
