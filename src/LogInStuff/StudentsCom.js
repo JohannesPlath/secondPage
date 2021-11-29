@@ -3,118 +3,118 @@ var Students = [
     {
         "ID": "1",
         "FirstName": "Tom",
-        "    LastName " :"Tailor ",
+        "LastName" :"Tailor ",
         "Gender": "1",
-        "DOB  ": "1995/08/25",
+        "DOB": "1995/08/25",
         "Department": "IT",
-        "EmailID ": "tomholland@gmail.com",
+        "EmailID": "tomholland@gmail.com",
         "JoiningYr" : "2019.10.01"
     },
     {
         "ID": "3",
         "FirstName": "Joesephin",
-        "LastName ": "Harris",
+        "LastName": "Harris",
         "Gender": "2",
         "DOB": "1990/07/25",
         "Department": "IT",
-        "EmailID ": "joesyH@gmail.com",
+        "EmailID": "joesyH@gmail.com",
         "JoiningYr": "2019.10.01"
     },
     {
         "ID": "4",
         "FirstName": "Billa",
-        "LastName ": "Bong",
+        "LastName": "Bong",
         "Gender": "2",
         "DOB": "1995/07/25",
         "Department": "Maschienenbau",
-        "EmailID ": "joeharry@gmail.com",
+        "EmailID": "joeharry@gmail.com",
         "JoiningYr": "2020.04.01"
     }, {
         "ID": "5",
         "FirstName": "Pitt",
-        "LastName ": "Pottery",
+        "LastName": "Pottery",
         "Gender": "1",
         "DOB": "1994/07/25",
         "Department": "WEB",
-        "EmailID ": "PiPy@gmail.com",
+        "EmailID": "PiPy@gmail.com",
         "JoiningYr": "2021.04.01"
     },
     {
         "ID": "6",
         "FirstName": "Fred",
-        "LastName ": "Parry",
+        "LastName": "Parry",
         "Gender": "1",
         "DOB": "1994/07/25",
         "Department": "Maschienenbau",
-        "EmailID ": "joeharry@gmail.com",
+        "EmailID": "joeharry@gmail.com",
         "JoiningYr": "2020.10.01"
     },
     {
         "ID": "7",
         "FirstName": "Philipp",
-        "LastName ": "Morrris",
+        "LastName": "Morrris",
         "Gender": "1",
         "DOB": "1998/07/25",
         "Department": "IT",
-        "EmailID ": "joesyH@gmail.com",
+        "EmailID": "joesyH@gmail.com",
         "JoiningYr": "2020.04.01"
     },
     {
         "ID": "8",
         "FirstName": "Berta",
-        "LastName ": "Broetchen",
+        "LastName": "Broetchen",
         "Gender": "2",
         "DOB": "1980/07/25",
         "Department": "WEB",
-        "EmailID ": "BeBro@gmail.com",
+        "EmailID": "BeBro@gmail.com",
         "JoiningYr": "2020.10.01"
     },
     {
         "ID": "9",
         "FirstName": "Tomas",
-        "    LastName " :"Cock ",
+        "LastName " :"Cock ",
         "Gender": "1",
-        "DOB  ": "1995/08/25",
+        "DOB": "1995/08/25",
         "Department": "IT",
-        "EmailID ": "tomcock@gmail.com",
+        "EmailID": "tomcock@gmail.com",
         "JoiningYr" : "2019.10.01"
     }, {
         "ID": "10",
         "FirstName": "Patty",
-        "LastName ": "Poo",
+        "LastName": "Poo",
         "Gender": "2",
         "DOB": "1994/05/05",
         "Department": "WEB",
-        "EmailID ": "papoo@gmail.com",
+        "EmailID": "papoo@gmail.com",
         "JoiningYr": "2019.04.01"
     },
     {
         "ID": 11,
         "FirstName": "Frederick",
-        "LastName ": "Ohlsen",
+        "LastName": "Ohlsen",
         "Gender": "1",
         "DOB": "1980/06/25",
         "Department": "Maschienenbau",
-        "EmailID ": "dragQuee69@gmail.com",
+        "EmailID": "dragQuee69@gmail.com",
         "JoiningYr": "2018.10.01"
     },
     {
         "ID": "12",
         "FirstName": "Philippa",
-        "LastName ": "Morrrisset",
+        "LastName": "Morrrisset",
         "Gender": "2",
         "DOB": "1998/10/25",
         "Department": "IT",
-        "EmailID ": "phimo@yahoo.com",
+        "EmailID": "phimo@yahoo.com",
         "JoiningYr": "2020.04.01"
     }, {
         "ID": "13",
         "FirstName": "Marty",
-        "LastName ": "McFly",
+        "LastName": "McFly",
         "Gender": "1",
         "DOB": "1994/07/25",
         "Department": "WEB",
-        "EmailID ": "marfly@gmail.com",
+        "EmailID": "marfly@gmail.com",
         "JoiningYr": "2020.10.01"
     },
 
@@ -122,11 +122,23 @@ var Students = [
 ]
 function showSelectedList(){
     let element = document.getElementById("SS/WS")
-    var test = filterJoiningYear(Students, element.value)
-    console.log(test)
+    var actualList = filterJoiningYear(Students, element.value)
+    showFiltered(actualList);
+}
+function showFiltered(students) {
+    var ul = document.getElementById("actualisedList");
+    while (ul.firstChild)
+        ul.removeChild(ul.firstChild);
+    for (let i = 0; i < students.length; i++) {
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(completetEntry(students[i])));
+        ul.appendChild(li);
+    }
 }
 
-
+function completetEntry(student){
+    return student.LastName +", "+ student.FirstName + "," + student.DOB + "," + student.Department + ","+ student.JoiningYr ;
+}
 let searchedStudentsIT = Students.filter (function (e) {
         return e.Department == "IT";
     });
@@ -146,13 +158,13 @@ function filterDepartment(students, Department) {
 function filterJoiningYear(students, Semester){
     if(Semester==="Summer"){
         return students.filter(function (student){
-            var dateSliceArea = student.JoiningYr.slice(5,7)
-            return dateSliceArea >= 4 && dateSliceArea <=9
+            var month = parseInt(student.JoiningYr.slice(5,7))
+            return month === 4
         });
     } else if (Semester==="Winter"){
         return students.filter(function (student){
-            var dateSliceArea = student.JoiningYr.slice(5,7)
-            return dateSliceArea >= 9 && dateSliceArea <=1
+            var month = parseInt(student.JoiningYr.slice(5,7))
+            return month === 10
         });
     }
 
