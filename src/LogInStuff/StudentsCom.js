@@ -1,14 +1,13 @@
-
 var Students = [
     {
         "ID": "1",
         "FirstName": "Tom",
-        "LastName" :"Tailor ",
+        "LastName": "Tailor ",
         "Gender": "1",
         "DOB": "1995/08/25",
         "Department": "IT",
         "EmailID": "tomholland@gmail.com",
-        "JoiningYr" : "2019.10.01"
+        "JoiningYr": "2019.10.01"
     },
     {
         "ID": "3",
@@ -72,12 +71,12 @@ var Students = [
     {
         "ID": "9",
         "FirstName": "Tomas",
-        "LastName " :"Cock ",
+        "LastName ": "Cock ",
         "Gender": "1",
         "DOB": "1995/08/25",
         "Department": "IT",
         "EmailID": "tomcock@gmail.com",
-        "JoiningYr" : "2019.10.01"
+        "JoiningYr": "2019.10.01"
     }, {
         "ID": "10",
         "FirstName": "Patty",
@@ -120,11 +119,14 @@ var Students = [
 
 
 ]
-function showSelectedList(){
-    let element = document.getElementById("SS/WS")
-    var actualList = filterJoiningYear(Students, element.value)
+
+function showSelectedList() {
+    let Semester = document.getElementById("SS/WS")
+    let department = document.getElementById("Department")
+    var actualList = filterListe(Students, Semester.value, department.value)
     showFiltered(actualList);
 }
+
 function showFiltered(students) {
     var ul = document.getElementById("actualisedList");
     while (ul.firstChild)
@@ -136,12 +138,13 @@ function showFiltered(students) {
     }
 }
 
-function completetEntry(student){
-    return student.LastName +", "+ student.FirstName + "," + student.DOB + "," + student.Department + ","+ student.JoiningYr ;
+function completetEntry(student) {
+    return student.LastName + ", " + student.FirstName + "," + student.DOB + "," + student.Department + "," + student.JoiningYr;
 }
-let searchedStudentsIT = Students.filter (function (e) {
-        return e.Department == "IT";
-    });
+
+let searchedStudentsIT = Students.filter(function (e) {
+    return e.Department == "IT";
+});
 
 /*
 function loadJSON(" ./Students.json", function(text){
@@ -150,20 +153,20 @@ function loadJSON(" ./Students.json", function(text){
 });*/
 
 function filterDepartment(students, Department) {
-    return students.filter(function (student){
-        return student.Department===Department
+    return students.filter(function (student) {
+        return student.Department === Department
     });
 }
 
-function filterJoiningYear(students, Semester){
-    if(Semester==="Summer"){
-        return students.filter(function (student){
-            var month = parseInt(student.JoiningYr.slice(5,7))
+function filterListe(students, Semester, department) {
+    if (Semester === "Summer") {
+        return students.filter(function (student) {
+            var month = parseInt(student.JoiningYr.slice(5, 7))
             return month === 4
         });
-    } else if (Semester==="Winter"){
-        return students.filter(function (student){
-            var month = parseInt(student.JoiningYr.slice(5,7))
+    } else if (Semester === "Winter") {
+        return students.filter(function (student) {
+            var month = parseInt(student.JoiningYr.slice(5, 7))
             return month === 10
         });
     }
